@@ -1,0 +1,7 @@
+/* App-specific local styles (global styles handled in index.css) */
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
