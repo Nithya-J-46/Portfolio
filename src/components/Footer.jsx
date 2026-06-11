@@ -68,14 +68,14 @@ export default function Footer() {
           <div>
             <div
               style={{
-                fontSize: '1.5rem',
+                fontSize: '1.4rem',
                 fontWeight: 800,
                 color: '#FFFFFF',
                 marginBottom: '8px',
-                letterSpacing: '-0.02em',
+                letterSpacing: '-0.03em',
               }}
             >
-              Nithya<span style={{ color: 'var(--accent)' }}>.</span>
+              Nithya<span style={{ color: 'var(--accent)', marginLeft: '6px', fontWeight: 600 }}>Subhashini J</span>
             </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', maxWidth: '300px' }}>
               Building premium, scalable web applications that solve real-world problems.
@@ -86,9 +86,9 @@ export default function Footer() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             <div style={{ display: 'flex', gap: '12px' }}>
               <a
-                href="https://github.com"
+                href="https://github.com/Nithya-J-46"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 style={{
                   width: '40px',
                   height: '40px',
@@ -106,9 +106,9 @@ export default function Footer() {
                 <Github size={18} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/nithyasubhashini/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 style={{
                   width: '40px',
                   height: '40px',
@@ -184,7 +184,7 @@ export default function Footer() {
               fontSize: '0.75rem',
             }}
           >
-            <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#8B5CF6', animation: 'blink 2s infinite' }}></span>
+            <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#6366F1', animation: 'blink 2s infinite' }}></span>
             <span>Visitor Count:</span>
             <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-light)', fontWeight: 600 }}>{visitorCount}</span>
           </div>
@@ -196,8 +196,8 @@ export default function Footer() {
               width: '36px',
               height: '36px',
               borderRadius: '50%',
-              backgroundColor: 'rgba(139, 92, 246, 0.1)',
-              border: '1px solid rgba(139, 92, 246, 0.2)',
+              backgroundColor: 'rgba(99, 102, 241, 0.1)',
+              border: '1px solid rgba(99, 102, 241, 0.2)',
               color: 'var(--accent-light)',
               display: 'flex',
               alignItems: 'center',
@@ -207,11 +207,11 @@ export default function Footer() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--accent)';
-              e.currentTarget.style.color = '#000000';
+              e.currentTarget.style.color = '#FFFFFF';
               e.currentTarget.style.transform = 'translateY(-3px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(139, 92, 246, 0.1)';
+              e.currentTarget.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
               e.currentTarget.style.color = 'var(--accent-light)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
@@ -225,7 +225,7 @@ export default function Footer() {
         .social-btn:hover {
           color: #FFFFFF !important;
           border-color: var(--border-hover) !important;
-          background-color: rgba(139, 92, 246, 0.05) !important;
+          background-color: rgba(99, 102, 241, 0.05) !important;
           transform: translateY(-2px);
         }
         @keyframes blink {

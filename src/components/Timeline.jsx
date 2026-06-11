@@ -7,35 +7,47 @@ export default function Timeline() {
     {
       role: 'Backend Developer',
       company: 'He5 Solutions',
-      duration: 'Jan 2026 – May 2026',
+      duration: 'Jan 2026 – Jun 2026',
       description: [
-        'Designed and optimized database APIs using Django and Flask.',
-        'Improved response query speeds and designed relational schemas in MySQL.',
-        'Collaborated on backend service deployment and API endpoint security.'
+        'Developed and maintained backend APIs and server-side logic.',
+        'Managed database operations and optimized performance.',
+        'Implemented authentication and ensured secure data handling.',
+        'Collaborated with frontend team for seamless API integration.'
       ],
       tags: ['Django', 'Flask', 'MySQL', 'APIs']
+    },
+    {
+      role: 'Infosys Springboard Internship 6.0',
+      company: 'Web Platform for Medical Appointment Scheduling and Record Management',
+      duration: 'Feb 2026 – Apr 2026',
+      description: [
+        'Developed a web-based medical appointment platform.',
+        'Built patient record management features.',
+        'Designed responsive and user-friendly interfaces.',
+        'Participated in testing and documentation.',
+        'Collaborated with team members to deliver project goals.'
+      ],
+      tags: ['Spring Boot', 'React', 'MySQL']
     },
     {
       role: 'Full Stack Developer',
       company: 'VDart',
       duration: 'Jun 2025 – Jul 2025',
       description: [
-        'Developed interactive user interface components using React.',
-        'Wrote backend data models and database triggers.',
-        'Participated in daily standups and agile team workflows.'
+        'Worked on automation projects and gained hands-on experience with Robot Units, API integration, and process optimization.',
+        'Collaborated with team members to implement solutions and improve workflows.'
       ],
-      tags: ['React', 'MySQL', 'Full Stack', 'Agile']
+      tags: ['React', 'MySQL', 'Full Stack', 'API Integration']
     },
     {
       role: 'Web Development Intern',
-      company: 'Octanet Services',
-      duration: 'Summer 2024 / Project Period',
+      company: 'Octanet Services Pvt. Ltd.',
+      duration: 'Sep 2024 – Oct 2024',
       description: [
-        'Completed tasks in HTML/CSS, basic JavaScript, and server communication.',
-        'Created clean landing pages and responsive site prototypes.',
-        'Acquired foundational skills in version control and project packaging.'
+        'Developed responsive web pages using HTML, CSS, JavaScript, and React.',
+        'Integrated APIs, optimized performance and gained practical experience with GitHub collaboration.'
       ],
-      tags: ['HTML', 'CSS', 'JavaScript', 'Git']
+      tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Git']
     }
   ];
 
@@ -69,7 +81,7 @@ export default function Timeline() {
             top: '0',
             bottom: '0',
             width: '2px',
-            background: 'linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.4) 15%, rgba(139, 92, 246, 0.4) 85%, transparent)',
+            background: 'linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.4) 15%, rgba(99, 102, 241, 0.4) 85%, transparent)',
           }}
           className="timeline-line"
         />
@@ -105,7 +117,7 @@ export default function Timeline() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 0 15px rgba(139, 92, 246, 0.25)',
+                  boxShadow: '0 0 15px rgba(99, 102, 241, 0.25)',
                   zIndex: 2,
                 }}
                 className="timeline-icon-container"

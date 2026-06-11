@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Terminal, Play, CheckCircle } from 'lucide-react';
+import { ArrowRight, Terminal, Play, CheckCircle, FileText } from 'lucide-react';
 
 export default function Hero() {
   const words = ['Full Stack Developer', 'Python Developer', 'React Developer', 'Problem Solver'];
@@ -92,8 +92,8 @@ export default function Hero() {
           <style>
             body { font-family: 'Inter', sans-serif; color: #111; padding: 40px; max-width: 800px; margin: 0 auto; line-height: 1.5; }
             h1 { font-size: 28px; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-            .subtitle { color: #8B5CF6; font-weight: bold; margin-bottom: 25px; }
-            h2 { border-bottom: 2px solid #8B5CF6; padding-bottom: 5px; margin-top: 30px; font-size: 18px; text-transform: uppercase; }
+            .subtitle { color: #6366F1; font-weight: bold; margin-bottom: 25px; }
+            h2 { border-bottom: 2px solid #6366F1; padding-bottom: 5px; margin-top: 30px; font-size: 18px; text-transform: uppercase; }
             .exp-item, .proj-item { margin-bottom: 15px; }
             .exp-header, .proj-header { display: flex; justify-content: space-between; font-weight: bold; }
             .tech-tags { font-style: italic; color: #555; font-size: 0.9em; }
@@ -106,11 +106,11 @@ export default function Hero() {
         </head>
         <body>
           <div style="text-align: center; margin-bottom: 20px;">
-            <button onclick="window.print()" style="padding: 10px 20px; background: #8B5CF6; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Print / Save as PDF</button>
+            <button onclick="window.print()" style="padding: 10px 20px; background: #6366F1; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Print / Save as PDF</button>
           </div>
           <h1>Nithya Subhashini J</h1>
           <div class="subtitle">Full Stack Developer | Python Developer | React Developer</div>
-          <p>Email: nithyasubhashini46@gmail.com | Portfolio: Web Link | Available from July 2026</p>
+          <p>Email: nithyasubhashini46@gmail.com | LinkedIn: www.linkedin.com/in/nithyasubhashini/ | GitHub: github.com/Nithya-J-46</p>
           
           <h2>Education</h2>
           <div><strong>Final Year B.E. Computer Science Engineering Student</strong></div>
@@ -119,7 +119,13 @@ export default function Hero() {
           <div class="exp-item">
             <div class="exp-header">
               <span>Backend Developer - He5 Solutions</span>
-              <span>Jan 2026 – May 2026</span>
+              <span>Jan 2026 – Jun 2026</span>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span>Infosys Springboard Internship 6.0</span>
+              <span>Feb 2026 – Apr 2026</span>
             </div>
           </div>
           <div class="exp-item">
@@ -130,33 +136,37 @@ export default function Hero() {
           </div>
           <div class="exp-item">
             <div class="exp-header">
-              <span>Web Development Intern - Octanet Services</span>
-              <span>Internship</span>
+              <span>Web Development Intern - Octanet Services Pvt. Ltd.</span>
+              <span>Sep 2024 – Oct 2024</span>
             </div>
           </div>
 
           <h2>Key Technical Skills</h2>
           <p><strong>Frontend:</strong> React, HTML, CSS, JavaScript</p>
-          <p><strong>Backend:</strong> Python, Django, Flask, Spring Boot</p>
+          <p><strong>Backend:</strong> Python, Django, Flask, Spring Boot, REST APIs</p>
           <p><strong>Database:</strong> MySQL, SQLite</p>
-          <p><strong>Tools:</strong> Git, GitHub, REST APIs, WordPress, Canva</p>
+          <p><strong>Tools:</strong> Git, GitHub, WordPress, Canva, Excel</p>
 
           <h2>Key Projects</h2>
           <div class="proj-item">
             <div class="proj-header"><span>Resume Screener</span><span>AI ATS Analyzer</span></div>
-            <div class="tech-tags">Tech: React, FastAPI, Python NLP, MySQL</div>
+            <div class="tech-tags">Tech: React.js, FastAPI, Python NLP, MySQL, JavaScript</div>
           </div>
           <div class="proj-item">
             <div class="proj-header"><span>Travel Bharat</span><span>Tourism Information</span></div>
-            <div class="tech-tags">Tech: React, Django, MySQL</div>
+            <div class="tech-tags">Tech: React.js, Django, MySQL, HTML, CSS, JavaScript</div>
           </div>
           <div class="proj-item">
-            <div class="proj-header"><span>MedVault</span><span>Appointment System</span></div>
+            <div class="proj-header"><span>MedVault</span><span>Appointment Booking & Medical Records System</span></div>
             <div class="tech-tags">Tech: Spring Boot, React, MySQL</div>
           </div>
           <div class="proj-item">
             <div class="proj-header"><span>Website Monitoring Platform</span><span>Real-time Monitor</span></div>
-            <div class="tech-tags">Tech: Flask, Python, MySQL</div>
+            <div class="tech-tags">Tech: Flask, Python, MySQL, HTML, CSS, JavaScript</div>
+          </div>
+          <div class="proj-item">
+            <div class="proj-header"><span>Student Placement Portal</span><span>Corporate Recruitment Interface</span></div>
+            <div class="tech-tags">Tech: Django, React, SQLite, HTML, CSS, JavaScript</div>
           </div>
         </body>
       </html>
@@ -180,7 +190,7 @@ export default function Hero() {
 
       {/* Glow Orbs */}
       <div className="glow-orb" style={{ top: '15%', left: '10%', width: '300px', height: '300px', background: 'var(--accent-glow)' }} />
-      <div className="glow-orb" style={{ bottom: '15%', right: '10%', width: '400px', height: '400px', background: 'rgba(139,92,246,0.03)' }} />
+      <div className="glow-orb" style={{ bottom: '15%', right: '10%', width: '400px', height: '400px', background: 'rgba(99,102,241,0.03)' }} />
 
       <div
         style={{
@@ -205,8 +215,8 @@ export default function Hero() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              backgroundColor: 'rgba(139, 92, 246, 0.05)',
-              border: '1px solid rgba(139, 92, 246, 0.15)',
+              backgroundColor: 'rgba(99, 102, 241, 0.05)',
+              border: '1px solid rgba(99, 102, 241, 0.15)',
               borderRadius: '100px',
               padding: '6px 14px',
               width: 'fit-content',
@@ -215,7 +225,7 @@ export default function Hero() {
               fontWeight: 500,
             }}
           >
-            <CheckCircle size={14} color="#8B5CF6" />
+            <CheckCircle size={14} color="#6366F1" />
             <span>Available for Internships & Full-Time Opportunities from July 2026</span>
           </div>
 
@@ -286,7 +296,7 @@ export default function Hero() {
 
             <button
               onClick={() => handleScrollToSection('contact')}
-              className="btn btn-outline-purple"
+              className="btn btn-outline-accent"
             >
               <span>Contact Me</span>
             </button>
@@ -342,8 +352,8 @@ export default function Hero() {
                   <button
                     onClick={handleRunTerminal}
                     style={{
-                      background: 'rgba(139, 92, 246, 0.1)',
-                      border: '1px solid rgba(139, 92, 246, 0.3)',
+                      background: 'rgba(99, 102, 241, 0.1)',
+                      border: '1px solid rgba(99, 102, 241, 0.3)',
                       borderRadius: '4px',
                       color: 'var(--accent-light)',
                       display: 'flex',
@@ -357,10 +367,10 @@ export default function Hero() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = 'var(--accent)';
-                      e.currentTarget.style.color = '#000000';
+                      e.currentTarget.style.color = '#FFFFFF';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
+                      e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
                       e.currentTarget.style.color = 'var(--accent-light)';
                     }}
                   >
@@ -435,7 +445,7 @@ export default function Hero() {
                   }}
                 >
                   {terminalOutput.map((out, idx) => (
-                    <div key={idx} style={{ color: out.startsWith('▶') ? '#FFFFFF' : out.startsWith('  ') ? '#8B5CF6' : '#8E8E93' }}>
+                    <div key={idx} style={{ color: out.startsWith('▶') ? '#FFFFFF' : out.startsWith('  ') ? '#6366F1' : '#8E8E93' }}>
                       {out}
                     </div>
                   ))}

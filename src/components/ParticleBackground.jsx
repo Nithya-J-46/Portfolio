@@ -24,9 +24,9 @@ export default function ParticleBackground() {
         this.size = Math.random() * 1.5 + 0.5;
         this.speedX = Math.random() * 0.2 - 0.1;
         this.speedY = Math.random() * 0.2 - 0.1;
-        // Orange glow color
+        // Indigo/white particle color
         this.color = Math.random() > 0.5 
-          ? `rgba(139, 92, 246, ${Math.random() * 0.15 + 0.05})` 
+          ? `rgba(99, 102, 241, ${Math.random() * 0.15 + 0.05})` 
           : `rgba(255, 255, 255, ${Math.random() * 0.08 + 0.02})`;
       }
 
@@ -65,7 +65,7 @@ export default function ParticleBackground() {
         canvas.width / 2, 0, 10,
         canvas.width / 2, 0, canvas.height
       );
-      gradient.addColorStop(0, 'rgba(139, 92, 246, 0.02)');
+      gradient.addColorStop(0, 'rgba(99, 102, 241, 0.02)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);

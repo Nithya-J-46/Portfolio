@@ -1,33 +1,33 @@
 /* ----------------------------------------------------
    Nithya Subhashini J - Developer Portfolio Design System
-   Theme: Linear.app & Apple inspired Royal Purple & Black
+   Theme: Linear.app & Stripe inspired Deep Navy, Indigo, Purple & Cyan
    ---------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* Colors */
-  --bg-dark: #050505;
-  --bg-darker: #020202;
-  --bg-card: rgba(12, 12, 12, 0.6);
-  --bg-card-solid: #0d0d0d;
-  --bg-card-hover: rgba(20, 20, 20, 0.85);
+  --bg-dark: #090D16;          /* Slate Deep Navy */
+  --bg-darker: #05070C;        /* Darker Navy/Black */
+  --bg-card: rgba(15, 23, 42, 0.45); /* Navy Glassmorphism */
+  --bg-card-solid: #0F172A;    /* Deep Navy */
+  --bg-card-hover: rgba(30, 41, 59, 0.6);
   
-  --accent: #8B5CF6;
-  --accent-light: #A78BFA;
-  --accent-dark: #6D28D9;
-  --accent-glow: rgba(139, 92, 246, 0.12);
-  --accent-glow-strong: rgba(139, 92, 246, 0.35);
-  --accent-gradient: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
-  --accent-text-gradient: linear-gradient(to right, #FFFFFF 20%, #8B5CF6 80%, #C084FC 100%);
+  --accent: #6366F1;           /* Indigo-500 */
+  --accent-light: #06B6D4;     /* Cyan-500 */
+  --accent-dark: #7C3AED;      /* Purple-600 */
+  --accent-glow: rgba(99, 102, 241, 0.12);
+  --accent-glow-strong: rgba(99, 102, 241, 0.35);
+  --accent-gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #06B6D4 100%);
+  --accent-text-gradient: linear-gradient(to right, #FFFFFF 20%, #6366F1 60%, #06B6D4 100%);
   
   --border-color: rgba(255, 255, 255, 0.05);
-  --border-hover: rgba(139, 92, 246, 0.25);
-  --border-glow: rgba(139, 92, 246, 0.5);
+  --border-hover: rgba(99, 102, 241, 0.25);
+  --border-glow: rgba(6, 182, 212, 0.4);
   
   --text-primary: #F5F5F7;
-  --text-secondary: #8E8E93;
-  --text-muted: #48484A;
+  --text-secondary: #94A3B8;    /* Slate-400 */
+  --text-muted: #475569;       /* Slate-600 */
   
   /* Fonts */
   --font-sans: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -61,8 +61,8 @@ body {
   position: relative;
   background-color: var(--bg-dark);
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 0% 100%, rgba(139, 92, 246, 0.02) 0%, transparent 40%);
+    radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.03) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -90,7 +90,7 @@ body {
 /* Selection */
 ::selection {
   background-color: var(--accent);
-  color: #000000;
+  color: #FFFFFF;
 }
 
 /* Typography Utilities */
@@ -129,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-panel:hover {
   border-color: var(--border-hover);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(139, 92, 246, 0.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(99, 102, 241, 0.03);
 }
 
 .glass-card {
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: 0;
   border-radius: inherit;
-  background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(139, 92, 246, 0.06), transparent 40%);
+  background: radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(99, 102, 241, 0.06), transparent 40%);
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
@@ -178,8 +178,8 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
   mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 70%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 50%, #000 70%, transparent 100%);
   pointer-events: none;
@@ -205,14 +205,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background: var(--accent);
-  color: #000000;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.25);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
 }
 
 .btn-primary:hover {
   background: var(--accent-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4), 0 0 10px rgba(139, 92, 246, 0.2);
+  color: #05070C;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4), 0 0 10px rgba(6, 182, 212, 0.2);
 }
 
 .btn-primary:active {
@@ -232,16 +233,16 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.btn-outline-purple {
+.btn-outline-accent {
   background: transparent;
   color: var(--accent);
   border-color: var(--accent-glow-strong);
 }
 
-.btn-outline-purple:hover {
-  background: rgba(139, 92, 246, 0.05);
+.btn-outline-accent:hover {
+  background: rgba(99, 102, 241, 0.05);
   border-color: var(--accent);
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
   transform: translateY(-2px);
 }
 
@@ -253,9 +254,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 100px;
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(99, 102, 241, 0.1);
   color: var(--accent-light);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .badge-gray {

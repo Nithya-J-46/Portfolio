@@ -21,7 +21,7 @@ export default function GithubStats() {
     for (let w = 0; w < weekCount; w++) {
       const week = [];
       for (let d = 0; d < 7; d++) {
-        // Random level: 0 (none), 1 (light orange), 2 (medium orange), 3 (dark orange)
+        // Random level: 0 (none), 1 (light indigo), 2 (medium indigo), 3 (dark indigo)
         const val = Math.random();
         const level = val > 0.85 ? 3 : val > 0.65 ? 2 : val > 0.45 ? 1 : 0;
         
@@ -105,8 +105,8 @@ export default function GithubStats() {
                         borderRadius: '2px',
                         backgroundColor: 
                           day.level === 3 ? 'var(--accent)' :
-                          day.level === 2 ? 'rgba(139, 92, 246, 0.6)' :
-                          day.level === 1 ? 'rgba(139, 92, 246, 0.25)' :
+                          day.level === 2 ? 'rgba(99, 102, 241, 0.6)' :
+                          day.level === 1 ? 'rgba(99, 102, 241, 0.25)' :
                           'rgba(255, 255, 255, 0.03)',
                         border: '1px solid rgba(255, 255, 255, 0.02)',
                         cursor: 'pointer',

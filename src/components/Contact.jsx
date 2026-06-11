@@ -8,6 +8,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const tempErrors = {};
@@ -35,17 +36,56 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API request dispatch
-    setTimeout(() => {
+    setSubmitError('');
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
+      console.warn('Web3Forms Access Key is not configured. Running in simulation mode.');
+      // Simulate API request dispatch
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      }, 1500);
+      return;
+    }
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: 'Nithya Portfolio Visitor',
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitSuccess(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitError(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setSubmitError('Failed to connect to the server. Please check your network connection.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+    }
   };
 
   return (
@@ -95,12 +135,12 @@ export default function Contact() {
                 fontWeight: 600,
                 color: 'var(--accent-light)',
                 padding: '4px 12px',
-                backgroundColor: 'rgba(139, 92, 246, 0.08)',
-                border: '1px solid rgba(139, 92, 246, 0.25)',
+                backgroundColor: 'rgba(99, 102, 241, 0.08)',
+                border: '1px solid rgba(99, 102, 241, 0.25)',
                 borderRadius: '100px',
               }}
             >
-              <CheckCircle size={12} color="#8B5CF6" />
+              <CheckCircle size={12} color="#6366F1" />
               <span>Internship & Job Ready</span>
             </div>
           </div>
@@ -131,9 +171,9 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/nithyasubhashini/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -147,13 +187,13 @@ export default function Contact() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
               >
                 <Linkedin size={18} color="var(--accent)" />
-                <span>linkedin.com/in/nithya-subhashini</span>
+                <span>linkedin.com/in/nithyasubhashini</span>
               </a>
 
               <a
-                href="https://github.com"
+                href="https://github.com/Nithya-J-46"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -167,7 +207,7 @@ export default function Contact() {
                 onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
               >
                 <Github size={18} color="var(--accent)" />
-                <span>github.com/nithya-subhashini</span>
+                <span>github.com/Nithya-J-46</span>
               </a>
             </div>
           </div>
@@ -306,6 +346,26 @@ export default function Contact() {
                       </span>
                     )}
                   </div>
+
+                  {submitError && (
+                    <div
+                      style={{
+                        padding: '12px 16px',
+                        backgroundColor: 'rgba(239, 68, 68, 0.08)',
+                        border: '1px solid rgba(239, 68, 68, 0.25)',
+                        borderRadius: '8px',
+                        color: '#EF4444',
+                        fontSize: '0.85rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        marginBottom: '12px',
+                      }}
+                    >
+                      <AlertCircle size={16} />
+                      <span>{submitError}</span>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button

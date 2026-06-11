@@ -8,56 +8,47 @@ export default function Projects() {
     {
       title: 'Resume Screener',
       subtitle: 'AI-powered ATS Resume Analyzer',
-      description: 'An intelligent platform analyzing resumes against job descriptions, yielding matching scores and detailed keyword recommendations using Python NLP parsing.',
-      tech: ['React', 'FastAPI', 'Python NLP', 'MySQL'],
-      github: 'https://github.com',
+      description: 'Full-stack AI platform scoring resumes against job descriptions (ATS match metrics). Integrates an AI Chat Assistant, Salary Estimator (India/USA), job market trends analysis, interview Q&A generator, and skill roadmap into a single tool.',
+      tech: ['React.js', 'FastAPI', 'Python NLP', 'MySQL', 'JavaScript'],
+      github: 'https://github.com/Nithya-J-46',
       demo: '#',
       category: 'React'
     },
     {
       title: 'Travel Bharat',
       subtitle: 'Tourism & Travel Information Platform',
-      description: 'A rich travel guide displaying details of monuments, states, and booking utilities with localized guides and secure admin panels.',
-      tech: ['React', 'Django', 'MySQL'],
-      github: 'https://github.com',
+      description: 'Full-stack travel platform to explore destinations across India. Features search mechanisms, travel details, user navigation, and REST APIs connected to relational databases for destination management.',
+      tech: ['React.js', 'Django', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/Nithya-J-46',
       demo: '#',
       category: 'Django'
     },
     {
       title: 'MedVault',
-      subtitle: 'Medical Records & Booking System',
-      description: 'A secure healthcare management dashboard containing electronic health records and real-time patient-doctor appointment scheduling calendars.',
+      subtitle: 'Appointment Booking & Medical Records System',
+      description: 'Full-stack medical records and scheduling dashboard. Implemented secure role-based authentication, appointment booking pipelines, REST API workflows, and React dashboard panels with document uploads.',
       tech: ['Spring Boot', 'React', 'MySQL'],
-      github: 'https://github.com',
+      github: 'https://github.com/Nithya-J-46',
       demo: '#',
       category: 'Spring Boot'
     },
     {
       title: 'Website Monitoring Platform',
       subtitle: 'Real-time Uptime Monitoring System',
-      description: 'A platform querying target endpoints at intervals, charting responses, logging failures, and dispatching immediate mail updates.',
-      tech: ['Flask', 'Python', 'MySQL'],
-      github: 'https://github.com',
+      description: 'Real-time server uptime/downtime tracker utilizing Flask. Implemented secure user authentication, background schedulers for periodic checks, automated email failure alerts, and status monitor charts.',
+      tech: ['Flask', 'Python', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/Nithya-J-46',
       demo: '#',
       category: 'Flask'
     },
     {
       title: 'Student Placement Portal',
       subtitle: 'Corporate Recruitment Interface',
-      description: 'A streamlined repository managing college placement events, eligible resume matching, company workflows, and coordinator metrics.',
-      tech: ['Django', 'React', 'SQLite'],
-      github: 'https://github.com',
+      description: 'Full-stack repository managing college recruitment events. Implemented secure student registration/login profiles, Django-based REST APIs, React user dashboards, and SQLite storage for records.',
+      tech: ['Django', 'React', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/Nithya-J-46',
       demo: '#',
       category: 'Django'
-    },
-    {
-      title: 'Task Management System',
-      subtitle: 'Kanban Board & Productivity Tool',
-      description: 'An interactive scrum workflow allowing drag-and-drop status tasks, deadlines, and direct collaboration with teams.',
-      tech: ['Flask', 'MySQL'],
-      github: 'https://github.com',
-      demo: '#',
-      category: 'Flask'
     }
   ];
 
@@ -154,7 +145,7 @@ export default function Projects() {
                 borderRadius: '100px',
                 border: '1px solid',
                 borderColor: activeCategory === cat ? 'var(--accent)' : 'var(--border-color)',
-                backgroundColor: activeCategory === cat ? 'rgba(139, 92, 246, 0.08)' : 'rgba(255,255,255,0.02)',
+                backgroundColor: activeCategory === cat ? 'rgba(99, 102, 241, 0.08)' : 'rgba(255,255,255,0.02)',
                 color: activeCategory === cat ? 'var(--accent-light)' : 'var(--text-secondary)',
                 fontSize: '0.85rem',
                 fontWeight: 600,

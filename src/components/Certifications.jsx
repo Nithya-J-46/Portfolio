@@ -5,36 +5,36 @@ import { Award, ShieldCheck, ExternalLink, Calendar, BookOpen } from 'lucide-rea
 export default function Certifications() {
   const certifications = [
     {
-      title: 'Full Stack Development (React + Django)',
-      issuer: 'Infosys Springboard / Coursera',
-      date: 'Aug 2025',
-      credentialId: 'INF-FS-849204',
+      title: 'GeeksforGeeks Coding Practice Initiative (160 Days)',
+      issuer: 'GeeksforGeeks',
+      date: 'May 2026',
+      credentialId: 'GFG-160D-DSA',
       link: '#',
-      tags: ['React', 'Django', 'REST APIs']
+      tags: ['Python', 'Data Structures', 'Algorithms', 'Problem Solving']
     },
     {
-      title: 'Advanced Python Coding Certification',
-      issuer: 'HackerRank / GeeksforGeeks',
-      date: 'May 2025',
-      credentialId: 'PY-ADV-90342',
+      title: 'Ideathon Participation Certificate',
+      issuer: 'TamilNadu Skills, JIT Innovation Hub',
+      date: 'Jan 2026',
+      credentialId: 'TNS-JIT-IDE26',
       link: '#',
-      tags: ['Data Structures', 'Algorithms', 'OOP']
+      tags: ['Innovation', 'Ideation', 'Teamwork', 'Collaboration']
     },
     {
-      title: 'Relational Database Design & SQL',
-      issuer: 'MySQL Academy / Udemy',
-      date: 'Feb 2025',
-      credentialId: 'UD-SQL-55910',
+      title: 'Google Cloud Study Jam',
+      issuer: 'Google Developer Student Clubs (GDSC)',
+      date: 'Nov 2025',
+      credentialId: 'GDSC-GCP-JAM',
       link: '#',
-      tags: ['MySQL', 'Normalization', 'Indexing']
+      tags: ['Google Cloud', 'Cloud Computing', 'Infrastructure']
     },
     {
-      title: 'Agile Developer Foundation',
-      issuer: 'VDart Internships Academy',
-      date: 'Jul 2025',
-      credentialId: 'VD-AGL-0034',
+      title: 'Complete Python DSA Bootcamp',
+      issuer: 'Udemy (In Progress)',
+      date: 'Ongoing',
+      credentialId: 'UD-PYDSA-IP',
       link: '#',
-      tags: ['Scrum', 'Sprint Planning', 'Git']
+      tags: ['Python', 'DSA', 'Java Programming', 'Algorithms']
     }
   ];
 

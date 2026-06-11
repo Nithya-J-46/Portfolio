@@ -51,10 +51,10 @@ export default function About() {
               Education & Profile
             </h3>
             <p style={{ color: 'var(--text-primary)', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '16px' }}>
-              I am a <strong>Final Year Computer Science Engineering Student</strong> with a deep passion for building interactive, scalable web products.
+              I am a <strong>Final-year B.E. Computer Science and Engineering student</strong> with hands-on experience in Full Stack Development using React, Django, Flask, Spring Boot, and MySQL.
             </p>
             <p style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '0.95rem' }}>
-              My technical journey revolves around bridging the gap between elegant frontend interfaces and robust backend logic. I enjoy solving database design challenges, writing clean APIs, and translating user needs into clean, performant code.
+              Passionate about building scalable web applications, REST APIs, and solving real-world problems through technology. Seeking opportunities to contribute, learn, and grow as a Software Developer.
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export default function About() {
           }
         }
         .why-hire-item:hover {
-          background-color: rgba(255, 107, 0, 0.03);
+          background-color: rgba(99, 102, 241, 0.03);
         }
       `}</style>
     </section>

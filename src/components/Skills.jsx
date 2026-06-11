@@ -8,41 +8,42 @@ export default function Skills() {
       title: 'Frontend Development',
       icon: <Layout size={20} color="var(--accent)" />,
       skills: [
-        { name: 'React', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'HTML5', level: 95 },
-        { name: 'CSS3 / Modern Layouts', level: 90 },
-      ],
+        { name: 'React.js', color: '#61DAFB' },
+        { name: 'HTML5', color: '#E34F26' },
+        { name: 'CSS3', color: '#1572B6' },
+        { name: 'JavaScript', color: '#F7DF1E' }
+      ]
     },
     {
-      title: 'Backend Engineering',
+      title: 'Backend Development',
       icon: <Server size={20} color="var(--accent)" />,
       skills: [
-        { name: 'Python', level: 90 },
-        { name: 'Django', level: 85 },
-        { name: 'Flask', level: 80 },
-        { name: 'Spring Boot', level: 70 },
-      ],
+        { name: 'Python', color: '#3776AB' },
+        { name: 'Django', color: '#092E20' },
+        { name: 'Flask', color: '#008080' },
+        { name: 'Spring Boot', color: '#6DB33F' },
+        { name: 'REST API Development', color: '#7C3AED' }
+      ]
     },
     {
       title: 'Database & Systems',
       icon: <Database size={20} color="var(--accent)" />,
       skills: [
-        { name: 'MySQL', level: 85 },
-        { name: 'SQLite', level: 90 },
-        { name: 'Database Design', level: 80 },
-      ],
+        { name: 'MySQL', color: '#00758F' },
+        { name: 'SQLite', color: '#003B57' }
+      ]
     },
     {
-      title: 'Tools & Workflows',
+      title: 'Tools & Platforms',
       icon: <Settings size={20} color="var(--accent)" />,
       skills: [
-        { name: 'Git & GitHub', level: 85 },
-        { name: 'REST APIs', level: 90 },
-        { name: 'WordPress', level: 75 },
-        { name: 'Canva', level: 80 },
-      ],
-    },
+        { name: 'Git', color: '#F05032' },
+        { name: 'GitHub', color: '#E5E5EA' },
+        { name: 'WordPress', color: '#21759B' },
+        { name: 'Canva', color: '#00C4CC' },
+        { name: 'Excel', color: '#107C41' }
+      ]
+    }
   ];
 
   return (
@@ -55,7 +56,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
         >
           <h2>Skills & Technologies</h2>
-          <p>A breakdown of my technical toolkit and competency levels across layers.</p>
+          <p>Technologies, tools, and frameworks I use to build scalable applications.</p>
         </motion.div>
       </div>
 
@@ -78,58 +79,76 @@ export default function Skills() {
             style={{
               padding: '28px',
               border: '1px solid rgba(255, 255, 255, 0.05)',
-              backgroundColor: 'rgba(12, 12, 12, 0.4)',
+              backgroundColor: 'rgba(15, 23, 42, 0.35)', // Deep Navy glass
             }}
           >
             {/* Category Header */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-              {category.icon}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '24px' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '10px',
+                  background: 'rgba(99, 102, 241, 0.08)',
+                  border: '1px solid rgba(99, 102, 241, 0.2)',
+                }}
+              >
+                {category.icon}
+              </div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#FFFFFF' }}>{category.title}</h3>
             </div>
 
-            {/* Skills Bars Grid */}
+            {/* Badges Container */}
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr',
-                gap: '16px',
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '12px',
               }}
-              className="skills-bars-grid"
             >
               {category.skills.map((skill, skillIdx) => (
-                <div key={skillIdx} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  {/* Skill labels */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.88rem' }}>
-                    <span style={{ fontWeight: 500, color: '#E5E5EA' }}>{skill.name}</span>
-                    <span style={{ color: 'var(--accent-light)', fontWeight: 600 }}>{skill.level}%</span>
-                  </div>
-
-                  {/* Slider Progress Bar */}
-                  <div
+                <motion.div
+                  key={skillIdx}
+                  whileHover={{ y: -3, scale: 1.03 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '8px 16px',
+                    borderRadius: '100px',
+                    background: 'rgba(255, 255, 255, 0.02)',
+                    border: '1px solid rgba(255, 255, 255, 0.06)',
+                    color: '#E5E5EA',
+                    fontSize: '0.88rem',
+                    fontWeight: 500,
+                    cursor: 'default',
+                    transition: 'border-color var(--transition-fast), background-color var(--transition-fast)',
+                  }}
+                  className="skill-pill"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'var(--accent)';
+                    e.currentTarget.style.backgroundColor = 'rgba(99, 102, 241, 0.05)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.06)';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.02)';
+                  }}
+                >
+                  <span
                     style={{
-                      width: '100%',
+                      width: '6px',
                       height: '6px',
-                      backgroundColor: 'rgba(255,255,255,0.03)',
-                      borderRadius: '100px',
-                      border: '1px solid rgba(255,255,255,0.04)',
-                      overflow: 'hidden',
-                      position: 'relative',
+                      borderRadius: '50%',
+                      backgroundColor: skill.color,
+                      boxShadow: `0 0 6px ${skill.color}`,
                     }}
-                  >
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: skillIdx * 0.05 + catIdx * 0.1 }}
-                      style={{
-                        height: '100%',
-                        background: 'linear-gradient(to right, #FF6B00, #FF8F3D)',
-                        borderRadius: 'inherit',
-                        boxShadow: '0 0 8px rgba(255, 107, 0, 0.3)',
-                      }}
-                    />
-                  </div>
-                </div>
+                  />
+                  <span>{skill.name}</span>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -140,10 +159,6 @@ export default function Skills() {
         @media (min-width: 768px) {
           .skills-grid {
             grid-template-columns: 1fr 1fr !important;
-          }
-          .skills-bars-grid {
-            grid-template-columns: 1fr 1fr !important;
-            gap: 20px 24px !important;
           }
         }
       `}</style>

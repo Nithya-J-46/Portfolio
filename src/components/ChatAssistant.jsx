@@ -79,8 +79,8 @@ export default function ChatAssistant() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            border: '1px solid rgba(139, 92, 246, 0.25)',
-            boxShadow: '0 12px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(139, 92, 246, 0.05)',
+            border: '1px solid rgba(99, 102, 241, 0.25)',
+            boxShadow: '0 12px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(99, 102, 241, 0.05)',
             overflow: 'hidden',
           }}
         >
@@ -151,7 +151,7 @@ export default function ChatAssistant() {
                 style={{
                   alignSelf: msg.sender === 'user' ? 'flex-end' : 'flex-start',
                   backgroundColor: msg.sender === 'user' ? 'var(--accent)' : 'rgba(255, 255, 255, 0.03)',
-                  color: msg.sender === 'user' ? '#000000' : '#E5E5EA',
+                  color: msg.sender === 'user' ? '#FFFFFF' : '#E5E5EA',
                   padding: '10px 14px',
                   borderRadius: msg.sender === 'user' ? '14px 14px 2px 14px' : '14px 14px 14px 2px',
                   maxWidth: '85%',
@@ -223,7 +223,7 @@ export default function ChatAssistant() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.borderColor = 'var(--accent)';
-                      e.currentTarget.style.background = 'rgba(139,92,246,0.02)';
+                      e.currentTarget.style.background = 'rgba(99, 102, 241, 0.02)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.borderColor = 'var(--border-color)';
@@ -294,14 +294,14 @@ export default function ChatAssistant() {
             width: '56px',
             height: '56px',
             borderRadius: '50%',
-            backgroundColor: '#8B5CF6',
+            backgroundColor: '#6366F1',
             border: 'none',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#000000',
-            boxShadow: '0 8px 30px rgba(139, 92, 246, 0.4), 0 0 10px rgba(139, 92, 246, 0.2)',
+            color: '#FFFFFF',
+            boxShadow: '0 8px 30px rgba(99, 102, 241, 0.4), 0 0 10px rgba(99, 102, 241, 0.2)',
             transition: 'transform 0.2s, background-color 0.2s',
           }}
           onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.08) translateY(-2px)'}

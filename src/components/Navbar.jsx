@@ -90,16 +90,14 @@ export default function Navbar() {
         style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '2px',
           textDecoration: 'none',
-          fontSize: '1.25rem',
+          fontSize: '1.2rem',
           fontWeight: 800,
           color: '#FFFFFF',
-          letterSpacing: '-0.02em',
+          letterSpacing: '-0.03em',
         }}
       >
-        Nithya
-        <span style={{ color: 'var(--accent)', fontWeight: 900 }}>.</span>
+        Nithya<span style={{ color: 'var(--accent)', marginLeft: '6px', fontWeight: 600 }}>Subhashini J</span>
       </a>
 
       {/* Desktop Navigation Items */}
@@ -167,8 +165,8 @@ export default function Navbar() {
             fontSize: '0.75rem',
             fontWeight: 600,
             padding: '8px 14px',
-            backgroundColor: 'rgba(139, 92, 246, 0.08)',
-            border: '1px solid rgba(139, 92, 246, 0.25)',
+            backgroundColor: 'rgba(99, 102, 241, 0.08)',
+            border: '1px solid rgba(99, 102, 241, 0.25)',
             borderRadius: '100px',
             color: 'var(--accent-light)',
           }}
@@ -178,8 +176,8 @@ export default function Navbar() {
               width: '6px',
               height: '6px',
               borderRadius: '50%',
-              backgroundColor: '#8B5CF6',
-              boxShadow: '0 0 8px #8B5CF6',
+              backgroundColor: '#6366F1',
+              boxShadow: '0 0 8px #6366F1',
               animation: 'pulse-glow 1.5s infinite',
             }}
           />
@@ -247,8 +245,8 @@ export default function Navbar() {
               fontSize: '0.8rem',
               fontWeight: 600,
               padding: '10px 18px',
-              backgroundColor: 'rgba(139, 92, 246, 0.08)',
-              border: '1px solid rgba(139, 92, 246, 0.25)',
+              backgroundColor: 'rgba(99, 102, 241, 0.08)',
+              border: '1px solid rgba(99, 102, 241, 0.25)',
               borderRadius: '100px',
               color: 'var(--accent-light)',
               marginTop: '16px',
@@ -259,8 +257,8 @@ export default function Navbar() {
                 width: '6px',
                 height: '6px',
                 borderRadius: '50%',
-                backgroundColor: '#8B5CF6',
-                boxShadow: '0 0 8px #8B5CF6',
+                backgroundColor: '#6366F1',
+                boxShadow: '0 0 8px #6366F1',
               }}
             />
             Available from July 2026

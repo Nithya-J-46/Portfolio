@@ -77,10 +77,10 @@ export default function LoadingScreen({ onComplete }) {
           width: '100%',
           maxWidth: '600px',
           background: '#0d0d0d',
-          border: '1px solid rgba(139, 92, 246, 0.2)',
+          border: '1px solid rgba(99, 102, 241, 0.2)',
           borderRadius: '12px',
           padding: '24px',
-          boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(139, 92, 246, 0.05)',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(99, 102, 241, 0.05)',
         }}
       >
         {/* Terminal Header */}
@@ -100,7 +100,7 @@ export default function LoadingScreen({ onComplete }) {
             <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10B981' }}></span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: '#8E8E93' }}>
-            <Terminal size={14} color="#8B5CF6" />
+            <Terminal size={14} color="#6366F1" />
             <span>nithya_shell.sh</span>
           </div>
         </div>
@@ -121,12 +121,12 @@ export default function LoadingScreen({ onComplete }) {
           }}
         >
           {logs.map((log, index) => (
-            <div key={index} style={{ color: log.startsWith('$') ? '#8B5CF6' : '#D1D1D6' }}>
+            <div key={index} style={{ color: log.startsWith('$') ? '#6366F1' : '#D1D1D6' }}>
               {log}
             </div>
           ))}
           {logs.length < logSequence.length && (
-            <div style={{ display: 'inline-block', width: '8px', height: '15px', background: '#8B5CF6', animation: 'blink 1s step-end infinite' }} />
+            <div style={{ display: 'inline-block', width: '8px', height: '15px', background: '#6366F1', animation: 'blink 1s step-end infinite' }} />
           )}
         </div>
 
@@ -141,10 +141,10 @@ export default function LoadingScreen({ onComplete }) {
               style={{
                 width: `${Math.min(progress, 100)}%`,
                 height: '100%',
-                background: 'linear-gradient(to right, #8B5CF6, #C084FC)',
+                background: 'linear-gradient(to right, #6366F1, #06B6D4)',
                 borderRadius: 'inherit',
                 transition: 'width 0.1s ease',
-                boxShadow: '0 0 10px rgba(139, 92, 246, 0.5)',
+                boxShadow: '0 0 10px rgba(99, 102, 241, 0.5)',
               }}
             />
           </div>
