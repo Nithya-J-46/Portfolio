@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import WhatIBuild from './components/WhatIBuild';
 import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import GithubStats from './components/GithubStats';
@@ -37,6 +38,7 @@ export default function App() {
         <Hero />
         <About />
         <Skills />
+        <WhatIBuild />
         <Timeline />
         <Projects />
         <GithubStats />
